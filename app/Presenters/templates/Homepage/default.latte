@@ -1,0 +1,45 @@
+{block content}
+<div id="content">
+	<div class="container">
+		<h3>Značky</h3>
+			<div class="card" style="padding: 1em">
+				<a n:href="Edit:create" class="btn-small" style="background-color: #1E88E5"><i class="material-icons small">add</i>PŘIDAT ZNAČKU</a>
+				<table class="responsive-table">
+					<thead>
+					<tr>
+						<th>Název</th>
+						<th>Akce</th>
+					</tr>
+					</thead>
+					<tbody>
+					{foreach $znacky as $item}
+						<tr>
+							<td>{$item->nazov_znacky}</td>
+							<td><a n:href="Edit:edit $item->id">Editovat</a>
+								<a n:href="delete! $item->id">Smazat</a>
+							</td>
+						</tr>
+					{/foreach}
+					</tbody>
+				</table>
+
+				<div class="pagination">
+					{if $page > 1}
+						<a n:href="default, 1">První</a>
+			&nbsp;|&nbsp;
+						<a n:href="default, $page - 1">Předchozí</a>
+			&nbsp;|&nbsp;
+					{/if}
+						Stránka {$page} z {$lastPage}
+					{if $page < $lastPage}
+			&nbsp;|&nbsp;
+						<a n:href="default, $page + 1">Další</a>
+			&nbsp;|&nbsp;
+						<a n:href="default, $lastPage">Poslední</a>
+					{/if}
+				</div>
+			</div>
+	</div>
+</div>
+
+{/block}
