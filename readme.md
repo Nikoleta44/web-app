@@ -1,3 +1,19 @@
+Iniciálne naplenie databázi
+INSERT INTO `znacky` (`id`, `nazov_znacky`) VALUES
+(1,	'Nike'),
+(2,	'Adidas'),
+(3,	'Puma'),
+(4,	'New Balance'),
+(5,	'Champion'),
+(6,	'Fila'),
+(7,	'Jordan'),
+(8,	'Reebok'),
+(9,	'Salomon'),
+(10,	'Head'),
+(11,	'Loap'),
+(12,	'Arena');
+
+
 Nette Web Project
 =================
 
